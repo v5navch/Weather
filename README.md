@@ -1,9 +1,7 @@
 # weather-flask
 
 # Weather Report of Indian cities
-This live OI analysis graph presents trend of market. When Call Writters are increasing it means bearishness in market, and when Put Writters are increasing it means bullishness in market. Subject to some event trend may reflects wrong.
-
-![OI Graph](sample.png)
+Its a Simple Weather Reproting Webpage of Indian Cities.
 
 
 ### Prerequisites
