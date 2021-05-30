@@ -1,20 +1,12 @@
-name: Jekyll site CI
+FROM ubuntu:18.04
 
-on:
-  push:
-    branches: [ App ]
-  pull_request:
-    branches: [ App ]
 
-jobs:
-  build:
+COPY ./requirements.txt /app/requirements.txt
 
-    runs-on: ubuntu-latest
+WORKDIR /app
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+RUN pip install -r requirements.txt
+
+COPY . /app
+
+CMD ["python", "./app.py"]
