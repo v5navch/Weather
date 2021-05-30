@@ -1,0 +1,10 @@
+APP: simple web app using Python Flask
+Files: index, requirment , json & app File 
+Docker details: Dockerfile => DockerImage => Dockercontainer 
+Commands 
+docker build -t test .
+docker run -d -p 500:5000 test
+default port of flask "5000"
+docker pull v5navch/webapp:latest
+Retrieved the IP Address using "docker inspect 0e95d7a66461 | grep -i IPAddress"
+URL: Opened the webpage using IPAddress:PortNumber , example 172.17.0.2:5000
