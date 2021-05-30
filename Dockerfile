@@ -1,12 +1,7 @@
-FROM ubuntu:18.04
-
-
-COPY ./requirements.txt /app/requirements.txt
-
-WORKDIR /app
-
-RUN pip install -r requirements.txt
-
+FROM python:alpine3.7
 COPY . /app
-
-CMD ["python", "./app.py"]
+WORKDIR /app
+RUN pip install -r requirements.txt
+EXPOSE 5000
+ENTRYPOINT [ "python" ]
+CMD [ "app.py" ]
