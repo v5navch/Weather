@@ -48,7 +48,7 @@ Open Terminal (bash shell) and then run following commands
 
 ```
 cd Weather-app
-python Citiesweather.py
+python app.py
 ```
 
 ```
