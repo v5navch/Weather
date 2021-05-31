@@ -1,8 +1,4 @@
-FROM ubuntu:18.04
-
-RUN apt-get update 
-RUN apt-get install python3-pip
-RUN apt-get install flask
+FROM python:3.8
 COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 RUN pip install -r requirements.txt
