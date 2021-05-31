@@ -44,16 +44,20 @@ Werkzeug==1.0.1
 ```
 
 ### Usage
-Open Terminal (bash shell) and then run following commands
 
 ```
-cd Weather-app
-python app.py
-```
-
-```
+Dockerfile => DockerImage => Dockercontainer
+Commands:
+$ docker build -t App
+$ docker image ls
+docker run -d -p 500:5000 App
+default port of flask "5000"
+docker pull v5navch/webapp:latest
+Retrieved the IP Address using "docker inspect 106c25e9cf6a | grep -i IPAddress"
 Copy the http:// address shown on Terminal and Open it in browser. 
 E.g. http://127.0.0.1:5000/
+
+```
 
 
 
