@@ -1,11 +1,18 @@
-﻿from flask import Flask,render_template,request,abort
+from flask import Flask,render_template,request,abort
 # import json to load json data to python dictionary
 import json
 # urllib.request to make a request to api
 import urllib.request
-
+import logging
+import webbrowser
+webbrowser.open('http://127.0.0.1:5000')
 
 app = Flask(__name__)
+logging.basicConfig(filename='webapp.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+# read file
+with open('file.json', 'r') as myfile:
+    data = myfile.read()
+    
 def tocelcius(temp):
     return str(round(float(temp) - 273.16,2))
 
